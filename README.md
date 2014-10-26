@@ -4,7 +4,9 @@ myrepo
 
 #### Installation
 You will need the following components locally installed
+
 1. Docker
+
    Refer [here][http://docs.docker.com/installation) for instructions on how to install Docker.
    The latest version as of this writing is v1.3
    If you are on Mac/Windows, there is an additional step on installing Boot2Docker image and then running Docker on it.
