@@ -1,0 +1,18 @@
+db:
+  image: mysql
+  expose:
+    - "3306"
+  volumes_from:
+    - DBDATA
+  environment:
+    MYSQL_ROOT_PASSWORD: dbpass123
+
+web:
+  build: .
+  command: python manage.py runserver 0.0.0.0:8000
+  volumes:
+    - .:/app
+  ports:
+    - "8000:8000"
+  links:
+    - db
